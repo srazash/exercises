@@ -42,12 +42,12 @@
 //
 const print = @import("std").debug.print;
 
-const Narcissus = struct {
+pub const Narcissus = struct {
     me: *Narcissus = undefined,
     myself: *Narcissus = undefined,
     echo: void = undefined, // Alas, poor Echo!
 
-    fn fetchTheMostBeautifulType() type {
+    pub fn fetchTheMostBeautifulType() type {
         return @This();
     }
 };
